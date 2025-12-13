@@ -11,7 +11,6 @@ const string YELLOW = "\033[33m";
 const string BLUE = "\033[34m";
 const string CYAN = "\033[36m";
 const string MAGENTA = "\033[35m";
-const string WHITE = "\033[37m";
 
 // Function declarations
 void waitForEnter();
@@ -19,6 +18,8 @@ void TrainingLoop();
 void startNewGame();
 void BattleLoop();
 
+   string name;
+   
 // PLAYER STATS
 int stats[5] = {50, 10, 15, 5};
              //HP, ATK, END, EP
@@ -45,21 +46,41 @@ void waitForEnter() {
 void startNewGame() {
     cout << BLUE << "\n--- NEW GAME STARTED ---\n\n" << RESET;
     string name;
-    cout << "Enter your character name: ";
+     cout << CYAN << "Enter your character name:  ";
     cin >> name;
     cin.ignore();
 
-    cout << MAGENTA
-         << "*The sun rises over Cocoyashi Village. Peace once thrived here, but shadows fall.*\n"
-         << "*Arlong and his crew have seized the village, leaving fear behind.*\n"
-         << "*You, " << name << ", stand powerless as tragedy unfolds.*\n"
-         << "*Bell-mère’s sacrifice sparks a burning resolve within you.*\n"
-         << "*Your journey begins: grow stronger, return, and protect those you love.*\n\n"
-         << RESET;
-
-
-
-             waitForEnter();
+            cout << MAGENTA;
+        cout << "\n*The sun rises over Cocoyashi Village.*\n";
+        cout << "*Laughter once filled these streets — until Arlong arrived.*\n\n";
+        
+        cout << "Arlong: \"Pay the tribute… or die.\"\n\n";
+        
+        cout << "*Bell-mère steps forward, calm and unafraid.*\n";
+        cout << "Bell-mère: \"I paid for my daughters.\"\n\n";
+        
+        cout << "*A gunshot echoes.*\n\n";
+        
+        cout << "Nami: \"MAMA—!\"\n\n";
+        
+        cout << "*Rage takes over.*\n";
+        cout << name << ": \"YOU—!\"\n\n";
+        
+        cout << "*Your attack lands. It does nothing.*\n";
+        cout << "Arlong (laughing): \"Pathetic.\"\n\n";
+        
+        cout << "*You are thrown into the sea.*\n";
+        cout << "*Cold. Darkness.*\n\n";
+        cout << RESET;
+        
+        waitForEnter();
+        
+            cout << MAGENTA;
+    cout << "*\nYou drift between life and death.*\n";
+    cout << "*Weakness becomes resolve.*\n";
+    cout << "*You will return stronger.*\n\n";
+    cout << RESET;
+   waitForEnter(); 
           
     TrainingLoop();
 }
@@ -201,6 +222,21 @@ void BattleLoop() {
     cout << GREEN << "\n--- Battle Start: Arlong ---\n" << RESET;
     cout << "*The infamous Arlong awaits. Cocoyashi's fate is in your hands.*\n";
     cout << "*You recall Bell-mère's sacrifice and eight years of training.*\n";
+    
+    waitForEnter(); 
+        cout << RED;
+    cout << "Arlong: \"So… you crawled back.\"\n";
+    cout << "Arlong: \"Still human. Still weak.\"\n\n";
+    
+    cout << CYAN;
+    cout << name << ": \"I came back for one reason.\"\n";
+    cout << name << ": \"To end this.\"\n\n";
+    
+    cout << RED;
+    cout << "Arlong (grinning): \"Then scream.\" \n\n";
+    cout << RESET;
+
+   waitForEnter(); 
 
     while (playerHP > 0 && bossHP > 0) {
         cout << YELLOW << "\n========================" << RESET << "\n";
